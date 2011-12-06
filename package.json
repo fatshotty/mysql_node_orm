@@ -1,0 +1,23 @@
+{
+  "name": "node_ar",
+  "version": "0.0.1",
+  "dependencies": {
+    "mysql-libmysqlclient": "latest",
+    "logging": "latest"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 0.5.0"
+  },
+  "author": "Fatshotty <fat@fatshotty.net> (https://github.com/fatshotty)",
+  "description": "A simple nodejs module as active-record does",
+  "homepage": "https://github.com/fatshotty/node_ar",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fatshotty/node_ar.git"
+  },
+  "main": "index",
+  "scripts": {
+    "test": "jasmine-node --color --verbose spec/"
+  }
+}
