@@ -156,7 +156,6 @@ var DataType = require('mysql_node_orm/lib/datatype')
 What i'm going to do:
 
 * has_many_through relations
-* has_many dependent destroy
 * DataType conversion
 
 * More documentation is coming... ;)
