@@ -41,6 +41,61 @@ See file in the `spec` folder for examples
 Having a DB as ActiveRecord on Rails wants.
 You can able to perform `select` `insert` and `update` using `Models` like instances.
 
+```javascript
+var DataType = require('mysql_node_orm/lib/datatype');
+var Adapter = require('mysql_node_orm');
+
+var Author = Adapter.declare('Author', {
+  has_many: ['Book'],
+  destroy: [ 'Book' ],
+  fields: {
+    name: {
+      type: DataType.String,
+      unique: true
+    },
+    age: {
+      type: DataType.Int
+    }
+  }
+});
+
+Book = Adapter.declare('Book', {
+  belongs_to: ['Author'],
+  fields: {
+    name: {
+      type: DataType.String
+    },
+    pages_number: {
+      type: DataType.Int
+    }
+  },
+  methods:{
+    foo: function(bar){
+      this.test();
+      return 'foobar ' + bar;
+    },
+    test: function(){
+      return 'test method'
+    }
+  }
+});
+
+var author = Author.find( 1 );
+var books = author.books
+
+book = new Book({
+  name: 'Foobar book'
+});
+
+book.pages_number = 1024;
+
+books.push( book );
+
+author.save( true );
+
+Adapter.close();
+```
+
 
 ### Adapter(host, user, pwd, database, port)
 * it is the main class
@@ -98,15 +153,16 @@ var DataType = require('mysql_node_orm/lib/datatype')
 
 ## Todo
 
-What i'm going to add:
+What i'm going to do:
 
 * has_many_through relations
 * has_many dependent destroy
-* BUG: it doesn't delete the `has_many` relations while deleting a 'belongs_to' Model. But I'm still working on it.
+* DataType conversion
 
 * More documentation is coming... ;)
 
 
 ## Done
+* Delete model and its `dependencies`
 * Implement events
 * Fields validation
