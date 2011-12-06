@@ -1,5 +1,5 @@
 {
-  "name": "node_ar",
+  "name": "mysql_node_orm",
   "version": "0.0.1",
   "dependencies": {
     "mysql-libmysqlclient": "latest",
@@ -10,11 +10,11 @@
     "node": ">= 0.5.0"
   },
   "author": "Fatshotty <fat@fatshotty.net> (https://github.com/fatshotty)",
-  "description": "A simple nodejs module as active-record does",
-  "homepage": "https://github.com/fatshotty/node_ar",
+  "description": "A simple ActiveRecord like nodejs module for mysql",
+  "homepage": "https://github.com/fatshotty/mysql_node_orm",
   "repository": {
     "type": "git",
-    "url": "git://github.com/fatshotty/node_ar.git"
+    "url": "git://github.com/fatshotty/mysql_node_orm.git"
   },
   "main": "index",
   "scripts": {

@@ -61,6 +61,7 @@ describe('Model declaration', function(){
 
     Author = Adapter.declare('Author', {
       has_many: ['Book'],
+      destroy: [ 'Book' ],
       fields: {
         name: {
           type: DataType.String,
@@ -305,8 +306,10 @@ describe("Deleting authors and books", function(){
     // NOTE: the boolean parameter forces to delete also the relations
     expect( author.delete(true) ).toBeTruthy();
 
-    var book = Book.find('first');
-    expect( book ).toBeNull();
+    expect( Author.find('all').length ).toEqual( 0 );
+
+    var books = Book.find('all');
+    expect( books.length ).toEqual( 0 );
 
   });
 
