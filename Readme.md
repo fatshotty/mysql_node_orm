@@ -14,11 +14,9 @@ You can `find` and `find_by*` each field name.
 
 This module is based on Sannis's [node-mysql-libmysqlclient](https://github.com/Sannis/node-mysql-libmysqlclient).
 
-Node-Ar adds some simple features as ActiveRecord does.
+Mysql_node_orm adds some simple features as ActiveRecord does.
 
-I want to explain that it is not completed. This should be considered an example.
-
-But I would to expand it also with your help.
+I want to explain that it is not completed. But I'm working on it and  I would to expand it also with your help.
 
 So, do not hesitate to contact me for any question or doubts
 
@@ -34,7 +32,7 @@ npm install mysql_node_orm
 
 ## Usage
 
-See file in the `spec` folder for examples
+See files in the `spec` folder for examples
 
 
 ## Overview
@@ -122,10 +120,10 @@ var DataType = require('mysql_node_orm/lib/datatype')
 
 (Static methods)
 
-* Model.find( id /* as NUM */ )   # returns the instance of the model if found. Otherwise null
-* Model.find( 'all' )             # returns an Array instance contaning all model found by performing the `select`. Empty array if no record found
-* Model.find( 'first' )           # returns the instance of the model representing the first matched record if found. Otherwise null
-* Model.find_by( where, options, limit )
+* `Model.find( id /* as NUM */ )`   # returns the instance of the model if found. Otherwise null
+* `Model.find( 'all' )`             # returns an Array instance contaning all model found by performing the `select`. Empty array if no record found
+* `Model.find( 'first' )`           # returns the instance of the model representing the first matched record if found. Otherwise null
+* `Model.find_by( where, options, limit )`
 #### where (Object)
     ```javascipt
     where = {
@@ -148,12 +146,12 @@ var DataType = require('mysql_node_orm/lib/datatype')
     ```
 #### limit (Number)    Used as `LIMIT` sql condition
 
-* Model.find_by_foo_field_name( value )     # return an Array containing the result of `select * from table_foo_name where FOO_FIELD_NAME = VALUE`. A Model single instance if field id declared as unique
+* `Model.find_by_foo_field_name( value )`     # return an Array containing the result of `select * from table_foo_name where FOO_FIELD_NAME = VALUE`. A Model single instance if field id declared as unique
 
 
 ## Todo
 
-What i'm going to do:
+What I'm going to do:
 
 * has_many_through relations
 * DataType conversion
