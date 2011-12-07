@@ -2,9 +2,9 @@
 
 ## Purpose
 
-A simple `ActiveRecord like` nodejs module for mysql.
+A simple `ActiveRecord` like nodejs module for `mysql` database.
 
-It supports 'has_many' and 'belongs_to' relationship.
+It supports `has_many` and `belongs_to` relationship.
 
 You can `find` and `find_by*` each field name.
 
@@ -16,7 +16,7 @@ This module is based on Sannis's [node-mysql-libmysqlclient](https://github.com/
 
 Mysql_node_orm adds some simple features as ActiveRecord does.
 
-I want to explain that it is not completed. But I'm working on it and  I would to expand it also with your help.
+I'm working on it and I would to expand it also with your help.
 
 So, do not hesitate to contact me for any question or doubts
 
@@ -155,6 +155,7 @@ What I'm going to do:
 
 * has_many_through relations
 * DataType conversion
+* migrations
 
 * More documentation is coming... ;)
 
