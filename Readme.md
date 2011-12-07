@@ -146,7 +146,7 @@ var DataType = require('mysql_node_orm/lib/datatype')
     ```
 #### limit (Number)    Used as `LIMIT` sql condition
 
-* `Model.find_by_foo_field_name( value )`     # return an Array containing the result of `select * from table_foo_name where FOO_FIELD_NAME = VALUE`. A Model single instance if field id declared as unique
+* `Model.find_by_foo_field_name( value )`     # return an Array containing the result of `select * from table_foo_name where FOO_FIELD_NAME = VALUE`. A single Model instance if field is declared as unique
 
 
 ## Todo
